@@ -9,6 +9,9 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
 
+Base = declarative_base()
+
+
 class NewsArticle(Base):
     __tablename__ = 'news_articles'
 
