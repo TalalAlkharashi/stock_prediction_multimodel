@@ -14,7 +14,7 @@
             margin: 0;
             padding: 20px;
             background-color: rgba(1, 103, 213, 0.5);; /* Light blue background */
-            background-image: url("Images/stockP.jpg");
+            background-image: url("{{ url_for('static', filename='Images/stockP.jpg') }}");
             
         }
         
@@ -108,7 +108,7 @@
 </head>
 <body>
     <div class="top-bar">
-        <img class="logo" src="images/stc.jpeg" alt="Logo">
+        <img class="logo" src="{{ url_for('static', filename='Images/stc.jpeg') }}" alt="Logo">
         <h2>Saudi Telecommunication Company(7010)
         </h2>
     </div>
