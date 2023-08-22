@@ -1,25 +1,26 @@
-from flask import Flask, render_template, flash, redirect, url_for
-from datascrapper import NewsScraper  # Import your NewsScraper class
+from flask import Flask, render_template
 
-app = Flask(__name__)
-
-db_url = "sqlite:///news_database.db"
-scraper = NewsScraper(base_url="https://www.mubasher.info/markets/TDWL/stocks/4190/news", total_pages=1, db_url=db_url)
-scraper.initialize_db()
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/scrape')
-def scrape_data():
-    try:
-        scraper.scrape_data()
-        flash("Data scraping and storage successful!", 'success')
-    except Exception as e:
-        flash("An error occurred during scraping: " + str(e), 'error')
+@app.route('/alrajhi.html')
+def alrajhi():
+    return render_template('alrajhi.html')  # Replace 'alrajhi.html' with the actual filename
 
-    return redirect(url_for('index'))
+@app.route('/aramco.html')
+def aramco():
+    return render_template('aramco.html')  # Replace 'aramco.html' with the actual filename
+
+@app.route('/jarir.html')
+def jarir():
+    return render_template('jarir.html')  # Replace 'jarir.html' with the actual filename
+
+@app.route('/stc.html')
+def stc():
+    return render_template('stc.html')  # Replace 'stc.html' with the actual filename
 
 if __name__ == '__main__':
     app.run(debug=True)
