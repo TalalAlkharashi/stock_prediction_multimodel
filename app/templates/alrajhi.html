@@ -115,6 +115,8 @@ body {
             justify-content: right; /* Align items and h2 text on the right */
             padding: 10px 20px;
             z-index: 1000; /* Ensures it's on top of other content */
+            justify-content: space-between;
+
         }
 
 
@@ -128,22 +130,28 @@ body {
     <div class="top-bar">
         <a href="http://127.0.0.1:5000/">
             <img style="width: 50px; height: auto;" src="{{ url_for('static', filename='Images/backB_thumbnail.png') }}" alt="Logo">
-        </a>        <h2 style="margin-right: 20px; margin-left: 1050px;">مصرف الرجحي (1120)</h2>
+        </a>        <h2 style="margin-right: 20px;">مصرف الرجحي (1120)</h2>
         <img class="logo" src="{{ url_for('static', filename='Images/alrajhi') }}" alt="Logo">
         
     </div>
 
     <div class="left-side">
+        <h1>مؤشر السهم</h1>
         <div class="graph">
             <canvas id="lineChart"></canvas>
         </div>
         <button class="button">توقع</button>
         <div class="text" id="price">
-            <p>:السعر</p>
         </div>
     </div>
     <div class="right-side">
         <div class="card">
+            <div>
+                <h1 text-align: right>اخبار اليوم</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="news-scroll-container">
             <div class="news-item">
                 <h2 text-align: right>السوق السعودي.. 10 أسهم تقتنص 20% من السيولة بقيادة أرامكو</h2>
                 <p text-align: right>مباشر ـ ثابت شحاتة: سيطرت مجموعة من الأسهم على السيولة بسوق الأسهم السعودية "تداول"، خلال جلسة اليوم الثلاثاء، بقيادة سهم "ارامكو السعودية"، إلى جانب "اس تي سي" والبنك الأهلي وسابك ومصرف الراجحي. وبلغ إجمالي قيم تداول أعلى 10 أسهم من حيث القيمة …</p>
