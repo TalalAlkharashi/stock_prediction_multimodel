@@ -23,6 +23,9 @@
         h2 {
             text-align: right;
         }
+        h1 {
+            text-align: right;
+        }
         .left-side {
             flex: 1;
             display: flex;
@@ -47,7 +50,7 @@
         }
 
         .graph {
-            margin-top: 40px;
+            margin-top: 10px;
             width: 90%;
             height: 350px;
             background-color: lightgray;
@@ -55,7 +58,7 @@
         }
 
         .button {
-            margin-top: 40px;
+            margin-top: 10px;
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
@@ -74,6 +77,7 @@
             max-height: 550px;
             max-width: 800px;
             display: flex;
+            flex-direction: column;
             overflow-y: auto; /* Make it scrollable */
             padding-left: 20px; 
             padding-right: 20px;
@@ -89,8 +93,15 @@
 
         .card {
             background-color: transparent;
-            border-radius: 8px;
+            border-radius: 0px;
             width: 100%;
+            flex: none;
+        }
+        .news-scroll-container {
+            /* Add the following styles */
+            overflow-y: auto;
+            flex: 1; /* The container for scrolling news */
+            margin-top: 20px; /* Adjust as needed */
         }
         .top-bar {
             position: fixed;
@@ -123,15 +134,23 @@
     </div>
 
     <div class="left-side">
+        <h1>مؤشر السهم</h1>
         <div class="graph">
             <canvas id="lineChart"></canvas>
         </div>
         <button class="button" onclick="showPrice()">توقع</button>
-        <div class="text" id="price">
+        <div class="text" style="margin-top: 10px;" id="price">
         </div>
     </div>
     <div class="right-side">
         <div class="card">
+            <div>
+                <h1 text-align: right>اخبار اليوم</h1>
+                <hr>
+            </div>
+        </div>
+    
+        <div class="news-scroll-container">
             <div class="news-item">
                 <h2 text-align: right>جرير تعلن افتتاح معرض جديد في جدة باستثمارات 30 مليون ريال</h2>
                 <p text-align: right>الرياض - مباشر: أعلنت شركة جرير للتسويق، عن افتتاح معرض جديد بحي الأصالة، على طريق الحرمين بمحافظة جدة، وذلك يوم الجمعة 11 أغسطس 2023. وأوضحت الشركة، في بيان لها اليوم الأحد أن حجم الاستثمارات في هذا المعرض بلغ 30 مليون ريال. وأشارت إلى أنه سوف …</p>
