@@ -14,6 +14,7 @@
             margin: 0;
             padding: 20px;
             background-color: rgba(1, 103, 213, 0.5);; /* Light blue background */
+            background-image: url("Images/stockP.jpg");
             
         }
         
@@ -22,27 +23,34 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            background-color: rgba(255, 255, 255, 1);
+            padding-left: 20px; 
+            padding-right: 20px;
+            height: 550px;
+            width: 800px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-right: 10px;
+            margin-top: 40px;
         }
 
         .logo {
-            width: 150px;
+            width: 100px;
             height: auto;
-            margin-bottom: 20px;
+            margin-right: 20px;
+
         }
 
         .graph {
-            width: 80%;
-            height: 300px;
+            margin-top: 40px;
+            width: 90%;
+            height: 350px;
             background-color: lightgray;
             margin-bottom: 20px;
         }
 
         .button {
+            margin-top: 40px;
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
@@ -57,13 +65,16 @@
 
         .right-side {
             flex: 1;
-            background-color: rgba(255, 255, 255, 0.8);
-            max-height: 592px;
+            background-color: rgba(255, 255, 255, 1);
+            max-height: 550px;
+            max-width: 800px;
             display: flex;
             overflow-y: auto; /* Make it scrollable */
-            padding: 20px; /* Add some right padding for aesthetics */
+            padding-left: 20px; 
+            padding-right: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
         }
 
         .news-item {
@@ -76,12 +87,33 @@
             border-radius: 8px;
             width: 100%;
         }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000; /* Ensures it's on top of other content */
+}
+
+
+
+
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <div class="top-bar">
+        <img class="logo" src="images/aramco.png" alt="Logo">
+        <h2>Saudi Aramco(2222)
+        </h2>
+    </div>
+
     <div class="left-side">
-        <img class="logo" src="Images/aramco.png" alt="Company Logo">
         <div class="graph">
             <canvas id="lineChart"></canvas>
         </div>
