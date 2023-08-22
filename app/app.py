@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import yfinance as yf
 
 app = Flask(__name__, static_folder='static')
 
@@ -8,19 +9,31 @@ def index():
 
 @app.route('/alrajhi.html')
 def alrajhi():
-    return render_template('alrajhi.html')  # Replace 'alrajhi.html' with the actual filename
+    company_data = yf.download('1120.SR', period='1mo')
+    price = company_data['Close']
+    date = company_data.index
+    return render_template('alrajhi.html', price = price,  date = date)  # Replace 'alrajhi.html' with the actual filename
 
 @app.route('/aramco.html')
 def aramco():
-    return render_template('aramco.html')  # Replace 'aramco.html' with the actual filename
+    company_data = yf.download('2222.SR', period='1mo')
+    price = company_data['Close']
+    date = company_data.index
+    return render_template('aramco.html', price = price,  date = date)  # Replace 'aramco.html' with the actual filename
 
 @app.route('/jarir.html')
 def jarir():
-    return render_template('jarir.html')  # Replace 'jarir.html' with the actual filename
+    company_data = yf.download('4190.SR', period='1mo')
+    price = company_data['Close']
+    date = company_data.index
+    return render_template('jarir.html', price = price,  date = date)  # Replace 'jarir.html' with the actual filename
 
 @app.route('/stc.html')
 def stc():
-    return render_template('stc.html')  # Replace 'stc.html' with the actual filename
+    company_data = yf.download('7010.SR', period='1mo')
+    price = company_data['Close']
+    date = company_data.index
+    return render_template('stc.html', price = price,  date = date)  # Replace 'stc.html' with the actual filename
 
 if __name__ == '__main__':
     app.run(debug=True)

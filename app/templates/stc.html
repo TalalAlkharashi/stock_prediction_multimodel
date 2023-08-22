@@ -192,10 +192,10 @@
         var lineChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                labels: [{% for d in date %}"{{ d.strftime('%Y-%m-%d') }}",{% endfor %}],
                 datasets: [{
                     label: 'Company Stock Price',
-                    data: [100, 120, 110, 130, 140, 135],
+                    data: [{% for p in price %}{{ p }},{% endfor %}],
                     borderColor: 'blue',
                     backgroundColor: 'rgba(0, 123, 255, 0.1)',
                     borderWidth: 2
