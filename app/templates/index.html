@@ -15,7 +15,7 @@
     justify-content: center;
     height: 100vh;
     background-color: rgba(247, 247, 247, 0.85); /* Added background transparency */
-    background-image: url("Images/stocks.jpg");
+    background-image: url("{{ url_for('static', filename='Images/stocks.jpg') }}");
     background-size: cover; /* Adjusts background image size */
   }
 
@@ -93,7 +93,7 @@
 
   <div class="card-container">
     <a href="alrajhi.html" class="card">
-      <img src="{{ url_for('static', filename='Images/alrajhi.png') }}" alt="Company Logo">
+      <img src="{{ url_for('static', filename='Images/alrajhi') }}" alt="Company Logo">
     </a>
     <a href="aramco.html" class="card">
       <img src="{{ url_for('static', filename='Images/aramco.png') }}" alt="Company Logo">
@@ -102,7 +102,7 @@
         <img src="{{ url_for('static', filename='Images/jarir.png') }}" alt="Company Logo">
       </a>
       <a href="stc.html" class="card">
-        <img src="{{ url_for('static', filename='Images/stc.png') }}" alt="Company Logo">
+        <img src="{{ url_for('static', filename='Images/stc.jpeg') }}" alt="Company Logo">
       </a>
   </div>
 </body>
