@@ -115,6 +115,8 @@
             justify-content: right; /* Align items and h2 text on the right */
             padding: 10px 20px;
             z-index: 1000; /* Ensures it's on top of other content */
+            justify-content: space-between;
+
         }
 
 
@@ -128,7 +130,7 @@
     <div class="top-bar">
         <a href="http://127.0.0.1:5000/">
             <img style="width: 50px; height: auto;" src="{{ url_for('static', filename='Images/backB_thumbnail.png') }}" alt="Logo">
-        </a>        <h2 style="margin-right: 20px;margin-left: 1050px;">مكتبة جرير (4190)</h2>
+        </a>        <h2 style="margin-right: 20px;">مكتبة جرير (4190)</h2>
         <img class="logo" src="{{ url_for('static', filename='Images/jarir.png') }}" alt="Logo">
         
     </div>
