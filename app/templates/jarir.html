@@ -116,8 +116,8 @@
 <body>
     <div class="top-bar">
         <a href="http://127.0.0.1:5000/">
-            <img style="width: 50px; height: auto; margin-right: 1050px;" src="{{ url_for('static', filename='Images/backB_thumbnail.png') }}" alt="Logo">
-        </a>        <h2 style="margin-right: 20px;">مكتبة جرير (4190)</h2>
+            <img style="width: 50px; height: auto;" src="{{ url_for('static', filename='Images/backB_thumbnail.png') }}" alt="Logo">
+        </a>        <h2 style="margin-right: 20px;margin-left: 1050px;">مكتبة جرير (4190)</h2>
         <img class="logo" src="{{ url_for('static', filename='Images/jarir.png') }}" alt="Logo">
         
     </div>
@@ -184,7 +184,7 @@
             data: {
                 labels: [{% for d in date %}"{{ d.strftime('%Y-%m-%d') }}",{% endfor %}],
                 datasets: [{
-                    label: 'Company Stock Price',
+                    label: 'سعر السهم',
                     data: [{% for p in price %}{{ p }},{% endfor %}],
                     borderColor: 'blue',
                     backgroundColor: 'rgba(0, 123, 255, 0.1)',
