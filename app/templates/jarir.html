@@ -126,9 +126,8 @@
         <div class="graph">
             <canvas id="lineChart"></canvas>
         </div>
-        <button class="button">توقع</button>
+        <button class="button" onclick="showPrice()">توقع</button>
         <div class="text" id="price">
-            <p>:السعر</p>
         </div>
     </div>
     <div class="right-side">
@@ -183,6 +182,27 @@
                 }
             }
         });
+        var ctx = document.getElementById('lineChart').getContext('2d');
+        var lineChart = new Chart(ctx, {
+            // Chart configuration
+        });
+
+        function showPrice() {
+        var priceContainer = document.getElementById("price");
+        var ellipsisText = document.createElement("span");
+        ellipsisText.textContent = "...";
+        ellipsisText.style.marginLeft = "10px";
+        priceContainer.appendChild(ellipsisText);
+
+        // Simulate loading delay (remove this in your actual implementation)
+        setTimeout(function() {
+            var actualPriceText = document.createElement("span");
+            actualPriceText.textContent = "سعر السهم المتوقع: 88 ريال";
+            actualPriceText.style.marginLeft = "10px";
+            priceContainer.removeChild(ellipsisText); // Remove the ellipsis
+            priceContainer.appendChild(actualPriceText); // Display the actual price
+        }, 2000); // Adjust the delay time as needed
+    }
     </script>
 </body>
 </html>
