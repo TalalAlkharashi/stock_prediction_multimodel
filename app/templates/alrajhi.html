@@ -182,10 +182,10 @@
         var lineChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونيو'],
+                labels: [{% for d in date %}"{{ d.strftime('%Y-%m-%d') }}",{% endfor %}],
                 datasets: [{
-                    label: 'سعر السهم',
-                    data: [100, 120, 110, 130, 140, 135],
+                    label: 'Company Stock Price',
+                    data: [{% for p in price %}{{ p }},{% endfor %}],
                     borderColor: 'blue',
                     backgroundColor: 'rgba(0, 123, 255, 0.1)',
                     borderWidth: 2
@@ -199,6 +199,6 @@
                 }
             }
         });
-    </script>
+    </script>    
 </body>
 </html>
