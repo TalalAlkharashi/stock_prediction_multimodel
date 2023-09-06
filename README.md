@@ -1,5 +1,7 @@
 ﻿# stock_prediction_multimodel
- 
+
+
+
 The understanding of the stock market field is very
 essential to Saudi 2030 vision, and in efforts to accomplish that, one of the KPIs to ensuring education
 about that field is by optimizing the number of responsible investors in the market. However, there
@@ -18,6 +20,8 @@ the time-series model). Further exploration of feasibility of using Transformer-
 time-series is recommended.
 
 Model Architecture
+
+
 ![image](https://github.com/TalalAlkharashi/stock_prediction_multimodel/assets/86217112/b43d9353-4e03-4d5f-9e0f-65afcd039a0b)
 
 overleaf link: https://www.overleaf.com/7899274155bfjhccpqcmwf
