@@ -17,5 +17,8 @@ sentiment analysis model and 1.038 Riyal error in
 the time-series model). Further exploration of feasibility of using Transformer-based architecture for
 time-series is recommended.
 
+Model Architecture
+![image](https://github.com/TalalAlkharashi/stock_prediction_multimodel/assets/86217112/b43d9353-4e03-4d5f-9e0f-65afcd039a0b)
+
 overleaf link: https://www.overleaf.com/7899274155bfjhccpqcmwf
 Alternatively, the pdf File is https://github.com/TalalAlkharashi/stock_prediction_multimodel/blob/main/EconoMind_Report.pdf
